@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sapna Girme | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<script>
+  function openModal(img) {
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+</script>
+<script>
+  function showTab(tab) {
+    const projBtn = document.getElementById("projTab");
+    const certBtn = document.getElementById("certTab");
+    const projTab = document.getElementById("projectsTab");
+    const certTab = document.getElementById("certificatesTab");
+
+    if (tab === 'projects') {
+      projBtn.classList.add('active');
+      certBtn.classList.remove('active');
+      projTab.style.display = 'block';
+      certTab.style.display = 'none';
+    } else {
+      certBtn.classList.add('active');
+      projBtn.classList.remove('active');
+      certTab.style.display = 'block';
+      projTab.style.display = 'none';
+    }
+  }
+
+  function openModal(img) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+</script>
+
+<body>
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo"><a href="#home">Sapna Girme</a></div>
+
+    <!-- Hamburger Menu Toggle -->
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">My Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+  <div class="container hero-flex">
+    
+    <div class="hero-left">
+      <img src="Images/profile.jpeg" alt="Sapna Girme" class="profile-pic" />
+    </div>
+
+    <div class="hero-right">
+      <h1>Hello, It's <span>Sapna</span></h1>
+      <h2>I'm a <span class="typing"></span></h2>
+
+      <div class="hero-card">
+  <p>
+    I blend data, logic, and curiosity to build smart, useful things with Python and ML.
+  </p>
+  <div class="hero-actions">
+    <a href="Images/Sapna Girme Resume.pdf" class="btn-ghost">Download CV</a>
+
+    <div class="hero-icons">
+      <a href="https://github.com/sapnagirme" target="_blank" class="icon-circle">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/sapnagirme" target="_blank" class="icon-circle">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.hackerrank.com/profile/sapna_girme" target="_blank" class="icon-circle">
+        <i class="fab fa-hackerrank"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I’m a data science graduate with a solid foundation in machine learning, deep learning, and analytics. While I'm just starting out professionally, I’ve already worked on projects that apply these skills to real-world problems—from legal AI to healthcare and accident analysis. I enjoy turning messy data into clear insights and building solutions that actually make sense to people. I'm eager to contribute to teams where data isn’t just collected, but actually used to drive smart decisions.</p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>MSc in Data Science & Big Data Analytics</h3>
+          <p>B.K. Birla College of Arts, Science & Commerce Kalyan<br>2023 – 2025</p>
+        </div>
+        <div class="card">
+          <h3>BSc inInformation Technology</h3>
+          <p> S K Somaiya College of Science, Commerce & Arts<br>2020 – 2023</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="projects">
+  <div class="container">
+    <h2>My Work</h2>
+
+    <div class="project-tabs">
+      <button id="projTab" class="tab-btn active" onclick="showTab('projects')">Projects</button>
+      <button id="certTab" class="tab-btn" onclick="showTab('certificates')">Certificates</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="tab-content" id="projectsTab">
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="Images/project1.png" alt="Verdict AI" />
+          <div class="project-info">
+            <h3>Verdict AI</h3>
+            <p>Built a legal AI system combining TinyLLaMA, BART, FAISS, and IndicTrans2 for answering queries, summarizing documents, recommending cases, and translating legal texts.</p>
+            <a href="https://github.com/sapnagirme/Verdict-AI" target="_blank">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="Images/project2.jpeg" alt="Eye Disease Detection" />
+          <div class="project-info">
+            <h3>Eye Disease Detection</h3>
+            <p>Trained a CNN to classify images into cataract, glaucoma, diabetic
+ retinopathy, and normal; deployed with Flask; achieved 85%
+ accuracy.</p>
+            <a href="https://github.com/sapnagirme/Eye-Disease-Detection-Using-Deep-Learning" target="_blank">View Project</a>
+          </div>
+        </div>
+
+ <div class="project-card">
+          <img src="Images/project3.jpg" alt="Social Media Analytics Dashboard" />
+          <div class="project-info">
+            <h3>Social Media Analytics Dashboard</h3>
+            <p>Created a dashboard for engagement metrics like likes, shares,
+ and views; helped guide audience-specific content strategies</p>
+            <a href="https://github.com/sapnagirme/Social-Media-Analytics-Dashboard" target="_blank">View Project</a>
+          </div>
+        </div>
+
+ <div class="project-card">
+          <img src="Images/project4.jpg" alt="Road Accident Dashboard" />
+          <div class="project-info">
+            <h3>Road Accident Dashboard</h3>
+            <p>Analyzed 300K+ accident records to identify patterns by vehicle,
+ location, and light conditions; used slicers to support scenario
+based analysis</p>
+            <a href="https://github.com/sapnagirme/Road-Accident-Dashboard" target="_blank">View Project</a>
+          </div>
+        </div>
+
+ <div class="project-card">
+          <img src="Images/project5.jpeg" alt="Superstore Sales Dashboard" />
+          <div class="project-info">
+            <h3>Superstore Sales Dashboard</h3>
+            <p>Built an interactive dashboard to visualize sales, profit, and
+ orders by category and region, enabling KPI tracking and
+ performance insights.</p>
+            <a href="https://public.tableau.com/app/profile/sapna.girme/viz/Salesdashboard_17032364035140/Dashboard" target="_blank">View Project</a>
+          </div>
+        </div>
+
+ <div class="project-card">
+          <img src="Images/project6.jpeg" alt="Superstore Sales Dashboard" />
+          <div class="project-info">
+            <h3>Face Mask Detection System with Alarm</h3>
+            <p> Used Haar Cascades and CNN for real-time mask detection with
+ 96% accuracy; added sound alerts using mixer.sound for
+ violations.</p>
+            <a href="https://github.com/sapnagirme/Face-Mask-Detection-System-With-Alarm" target="_blank">View Project</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Certificates Grid -->
+    <div class="tab-content" id="certificatesTab" style="display:none;">
+      <div class="certificates-grid">
+        <img src="Images/cer22.jpg" alt="Certificate 22" onclick="openModal(this)">
+	<img src="Images/cer21.jpg" alt="Certificate 21" onclick="openModal(this)">
+	<img src="Images/cer20.jpg" alt="Certificate 20" onclick="openModal(this)">
+	<img src="Images/cer19.jpeg" alt="Certificate 19" onclick="openModal(this)">
+	<img src="Images/cer18.jpg" alt="Certificate 18" onclick="openModal(this)">
+	<img src="Images/cer17.jpg" alt="Certificate 17" onclick="openModal(this)">
+	<img src="Images/cer16.jpg" alt="Certificate 16" onclick="openModal(this)">
+	<img src="Images/cer15.jpg" alt="Certificate 15" onclick="openModal(this)">
+	<img src="Images/cer14.jpg" alt="Certificate 14" onclick="openModal(this)">
+	<img src="Images/cer13.png" alt="Certificate 13" onclick="openModal(this)">
+	<img src="Images/cer12.jpg" alt="Certificate 12" onclick="openModal(this)">
+	<img src="Images/cer11.jpg" alt="Certificate 11" onclick="openModal(this)">
+	<img src="Images/cer10.jpg" alt="Certificate 10" onclick="openModal(this)">
+	<img src="Images/cer9.jpg" alt="Certificate 9" onclick="openModal(this)">
+	<img src="Images/cer8.jpg" alt="Certificate 8" onclick="openModal(this)">
+	<img src="Images/cer7.jpg" alt="Certificate 7" onclick="openModal(this)">
+	<img src="Images/cer6.jpg" alt="Certificate 6" onclick="openModal(this)">
+	<img src="Images/cer5.jpg" alt="Certificate 5" onclick="openModal(this)">
+	<img src="Images/cer4.jpg" alt="Certificate 4" onclick="openModal(this)">
+	<img src="Images/cer3.png" alt="Certificate 3" onclick="openModal(this)">
+	<img src="Images/cer2.png" alt="Certificate 2" onclick="openModal(this)">
+	<img src="Images/cer1.png" alt="Certificate 1" onclick="openModal(this)">
+
+      </div>
+    </div>
+
+    <!-- Modal for Full-Screen Certificate -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <img class="modal-content" id="modalImage" />
+    </div>
+  </div>
+</section>
+      <!-- Add more cards as needed -->
+    </div>
+  </div>
+</section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="cards">
+        <div class="card">
+          <h3> Artificial Intelligence Extern</h3>
+          <p> Smart Internz <br>4th March 2024 – 15th May 2024</p>
+          <p> Gained hands-on experience in ML, DL, and data analytics.<br>Built models and algorithms using Python, Pandas, and Scikit-learn.<br>Worked on preprocessing, feature engineering, and model tuning.<br>Used Git and Jira for version control and project collaboration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="cards">
+
+      <div class="card soft-pink">
+        <h3>Programming <br>Languages</h3>
+        <p>Python, R, SQL, DAX</p>
+      </div>
+
+      <div class="card soft-pink">
+        <h3>Data Analysis & Visualization</h3>
+        <p>Pandas, NumPy, Matplotlib, Seaborn, Power BI, Tableau</p>
+      </div>
+
+<div class="card soft-pink">
+  <h3>Database <br>Management</h3>
+  <p>SQL, MySQL, PostgreSQL, Oracle</p>
+</div>
+
+
+     <div class="card soft-pink">
+  <h3>Machine & <br>Deep Learning</h3>
+  <p>Scikit-learn, TensorFlow, CNN, RNN, Classification, Regression, Clustering, Image Processing</p>
+</div>
+
+
+      <div class="card soft-pink">
+        <h3>Natural Language Processing (NLP)</h3>
+        <p>BERT, Transformers, LLMs, Summarization, NER, Chatbots, LangChain</p>
+      </div>
+
+<div class="card soft-pink">
+  <h3>Tools, Platforms <br>& IDEs</h3>
+  <p>
+    <strong>Tools & IDEs:</strong> Jupyter Notebook, Google Colab, Spyder IDE, Git, GitHub, Jira<br>
+    <strong>Platforms & Libraries:</strong> Hugging Face, Gradio, Flask, MongoDB, Canva
+  </p>
+</div>
+
+      <div class="card soft-pink">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, PHP</p>
+      </div>
+
+      <div class="card soft-pink">
+        <h3>Microsoft Office</h3>
+        <p>Excel, PowerPoint, Word</p>
+      </div>
+
+      <div class="card soft-pink">
+        <h3>Soft Skills</h3>
+        <p>Communication, Teamwork</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2 style="text-align: center; margin-bottom: 20px;">Contact Me</span></h2>
+  <div class="contact-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+
+    <div class="contact-icons" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 40px; justify-content: center;">
+  <a href="https://www.linkedin.com/in/sapna-girme-3961a523b/" target="_blank" class="contact-icon">
+    <i class="fab fa-linkedin"></i>
+    <span>LinkedIn</span>
+  </a>
+  <a href="mailto:girmesapna@gmail.com" class="contact-icon">
+    <i class="fas fa-envelope"></i>
+    <span>Email</span>
+  </a>
+  <a href="tel:+918828568788" class="contact-icon">
+    <i class="fas fa-phone"></i>
+    <span>Call</span>
+  </a>
+  <a href="https://maps.google.com/?q=Kalyan,+Mumbai,+India" target="_blank" class="contact-icon">
+    <i class="fas fa-map-marker-alt"></i>
+    <span>Location</span>
+  </a>
+</div>
+
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Sapna Girme</p>
+  </footer>
+
+  <!-- Typing Script & Fullscreen Certificate Viewer -->
+  <script>
+    const words = ["Data Scientist", "ML Engineer", "Data Analyst","Business Analyst", "Tech Explorer"];
+    let i = 0, j = 0, currentWord = "", isDeleting = false;
+    const type = () => {
+      const typingElement = document.querySelector(".typing");
+      if (!typingElement) return;
+      if (i === words.length) i = 0;
+      currentWord = words[i];
+      if (isDeleting) {
+        typingElement.textContent = currentWord.substring(0, j--);
+        if (j < 0) { isDeleting = false; i++; }
+      } else {
+        typingElement.textContent = currentWord.substring(0, j++);
+        if (j > currentWord.length) {
+          isDeleting = true;
+          setTimeout(type, 1000); return;
+        }
+      }
+      setTimeout(type, isDeleting ? 50 : 100);
+    };
+    document.addEventListener("DOMContentLoaded", type);
+
+    function openFull(src) {
+      const fullscreen = document.createElement("div");
+      fullscreen.id = "fullscreen";
+      fullscreen.innerHTML = `<img src="${src}" alt="Certificate" />`;
+      fullscreen.style.cssText = `
+        position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.9); display: flex; justify-content: center;
+        align-items: center; z-index: 9999;`;
+      fullscreen.onclick = () => fullscreen.remove();
+      document.body.appendChild(fullscreen);
+    }
+  </script>
+</body>
+</html>
